@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".YasSayfa">
+
+    <Button
+            android:text="Ana Sayfa"
+            android:layout_width="0dp"
+            android:id="@+id/byanasayfa" android:textSize="18sp"
+            android:textStyle="bold|italic" android:typeface="monospace" android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/bykilo" android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/sonuçyas"
+            android:layout_marginTop="100dp" style="@android:style/Widget.Material.Light.Button.Inset"/>
+    <Button
+            android:text="Kilo"
+            android:layout_width="0dp"
+            android:id="@+id/bykilo" android:typeface="monospace"
+            android:textSize="18sp" android:textStyle="bold|italic" android:textAllCaps="false"
+            app:layout_constraintStart_toEndOf="@+id/byanasayfa" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_height="wrap_content"
+            android:layout_marginTop="100dp" app:layout_constraintTop_toBottomOf="@+id/sonuçyas"
+            style="@android:style/Widget.Material.Light.Button.Inset"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="71dp" app:srcCompat="@drawable/gezegenler2"
+            tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="0dp" android:id="@+id/imageView"
+            android:scaleType="centerCrop"/>
+    <TextView
+            android:text="Gezegenlerde Kaç Yaşındasın??"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:id="@+id/textView" android:textSize="18sp"
+            android:typeface="monospace" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginTop="8dp"/>
+    <EditText
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/textyas"
+            android:hint="Dünyadaki yaşını gir.." android:typeface="monospace" android:textSize="12sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:visibility="visible"/>
+    <Button
+            android:text="Mars"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bymars" android:typeface="monospace"
+            android:textSize="14sp" android:textStyle="bold|italic" android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/byvenüs" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textyas"
+            style="@android:style/Widget.Material.Light.Button.Inset"/>
+    <Button
+            android:text="Venüs"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/byvenüs" android:textSize="14sp"
+            android:textStyle="bold|italic" android:textAllCaps="false" android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/bymars" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/byjüpiter" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textyas"
+            style="@android:style/Widget.Material.Light.Button.Inset"/>
+    <Button
+            android:text="Jüpiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/byjüpiter" android:textSize="14sp"
+            android:textStyle="bold|italic" android:textAllCaps="false" android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/byvenüs" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textyas"
+            style="@android:style/Widget.Material.Light.Button.Inset"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sonuçyas" android:textSize="24sp"
+            android:textStyle="bold" android:typeface="monospace" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/byvenüs" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+</android.support.constraint.ConstraintLayout>
